@@ -30,6 +30,27 @@
     #espacio{
       height: 30px;
     }
+    video{
+      width: 750px;
+    }
+    #informacion{
+      background-color: #88F7AF;
+      border-radius: 10px;
+      color: black;
+      width: 400px;
+      margin-left: 15%;
+    }
+    #services{
+      margin-left: 15%;
+      width: 550px;
+    }
+    #disease{
+     color: black;
+    }
+    #definition{
+     color: black;
+    }
+    
   </style>
 
 
@@ -62,16 +83,19 @@
       </div>
 
     </div>
-  </header><!-- End Header -->
+  </header>
+  
+  
+  <!--########################### End Header ###################-->
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs Section ======= -->
+    <!-- ##################### Seccion de PATH #################-->
     <section class="breadcrumbs">
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2> <strong> SINUS RHYTHM </strong> </h2>
+          <h2 id="disease"> <strong> SINUS RHYTHM </strong> </h2>
           <ol>
             <li><a href="index.html">Home</a></li>
             <li><a href="learn.html">Learn</a></li>
@@ -80,33 +104,34 @@
         </div>
 
       </div>
-    </section><!-- Breadcrumbs Section -->
+    </section>
+    <!-- ###################### End Seccion de PATH ################-->
 
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
+    
+<!-- ###################### Seccion de Definicion ################-->
+    <section id="definition">
+      <div class="container col-lg-12 justify-content-between">
+          <p>Sinus rhythm refers to the normal electrical activity of the heart, originating from the sinoatrial (SA) node, which is the heart's natural pacemaker. In sinus rhythm, the electrical impulses follow a specific pathway, resulting in a regular heartbeat. This rhythm is considered the normal rhythm of a healthy heart.</p>
+      </div>
+    </section>
+<!-- ###################### End Seccion de Definicion ################-->
+
+<!-- ###################### Seccion de foto ################-->
+    <section id="contenedor" class="portfolio-details">
       <div class="container">
-        <p>
-          Sinus rhythm refers to the normal electrical activity of the heart, originating from the sinoatrial (SA) node, which is the heart's natural pacemaker. In sinus rhythm, the electrical impulses follow a specific pathway, resulting in a regular heartbeat. This rhythm is considered the normal rhythm of a healthy heart.
-        </p>
-
-        <div class="row gy-4">
+        <div class="row">
           <div class="col-lg-7">
             <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center"></div>
-                <img src="assets/img/portfolio/synus.jpg" alt="">
-                
-                <div id="espacio"></div>
-
-              <div class="swiper-wrapper align-items-center">
-                <video src="assets/video/synus.mp4" autoplay controls alt="">
-              </div> 
+                <img src="assets/img/portfolio/synus.jpg" alt="" />
             </div>
           </div>
-          
-   <!--Fotos slider-->
-          <div class="col-lg-5">
-            <div class="portfolio-info">
 
+<!-- ###################### End Seccion de foto ################-->
+          
+<!-- ###################### Seccion de Informacion ################-->
+          <div class="col-lg-5">
+            <div class="portfolio-info" id="informacion">
+              
               <h3> <strong> Information </strong></h3>
               <ul>
                 <li><strong>Heart Rate</strong>: 60 to 100 beats per minute</li>
@@ -115,28 +140,47 @@
                 <li><strong>PR Interval</strong>: 0.12-0.20 seconds</li>
                 <li><strong>QRS </strong>: Narrow and uniform in shape </li>
               </ul>
+          
             </div>
+          </div>
+<!-- ###################### End Seccion de Informacion ################-->
 
-            <div id="espacio"></div>
-        
-            <section id="services">
+<!-- ###################### Seccion de foto ################-->
+
+  
+      <div class="col-lg-7">
+        <div class="portfolio-details-slider swiper">
+            <video src="assets/video/synus.mp4" alt="" controls> </video>
+        </div>
+      </div>
+
+<!-- ###################### End Seccion de foto ################-->
+           
+      
+      <div class="col-lg-5">
+        <div id="services">  
              <div class="container" data-aos="fade-up">
                  <div class="row">
-                  <div class="col-lg-6 col-md-5 box" data-aos="fade-up" data-aos-delay="100">
+                  
+                  <div class="col-lg-5 col-md-5" data-aos="fade-up" data-aos-delay="100">
                      <div class="icon"><i class="bi bi-briefcase"></i></div>
                      <h4 class="title"><a href="">Diagnosis</a></h4>
                      <p class="description">This ECG correspond to a healthy person.</p>
                   </div>
+
                  <div class="col-lg-6 col-md-5 box" data-aos="fade-up" data-aos-delay="200">
                       <div class="icon"><i class="bi bi-card-checklist"></i></div>
                      <h4 class="title"><a href="">Treatment</a></h4>
                      <p class="description">It is not necessary a treatment.</p>
                   </div>
-        
+      
                  </div>
         
+                </div>
               </div>
-            </section><!-- End Services Section -->
+            </section>
+            
+            <!-- End Services Section -->
           </div> 
 
 
