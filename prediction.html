@@ -37,6 +37,59 @@
     font-weight: bolder;
   }
 
+
+
+  .popup{
+    background-color: #ffffff;
+    border: #18D26E solid;
+    width: 450px;
+    padding:  0px 30px 10px 30px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none;
+    text-align: center;
+    color: black;
+    
+}
+.popup button{
+    display: block;
+    margin:  0 0 5px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+    color: black;
+}
+.al{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #0f72e5;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 0;
+}
+#ModificarPrediction{
+  font-weight: bolder;
+}
+
+
+
 </style>
   
 
@@ -101,7 +154,7 @@
     
             <header class="section-header wow fadeInUp">
             <h3>Prediction</h3>
-            <p> Predicts various heart diseases using parameters such as waveform, heart rate, R-R interval, etc.</p>
+            <p> Predicts various heart diseases using parameters such as heart rate, P waves P-R interval, etc.</p>
             </header>
     
             <div class="row">
@@ -110,154 +163,117 @@
                 <div class="icon"><i class="bi bi-briefcase"></i></div>
                 <h4 class="title"><a href="">Rhythm</a></h4>
                 <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
-                  <label class="form-check-label" for="flexSwitchCheckChecked">Regular </label>
+                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked_R">
+                  <label class="form-check-label" for="flexSwitchCheckChecked_R" >Regular </label>
                 </div>
                 <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
-                  <label class="form-check-label" for="flexSwitchCheckChecked"> Irregular</label>
+                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked_I">
+                  <label class="form-check-label" for="flexSwitchCheckChecked_I"> Irregular</label>
                 </div>
 
             </div>
+
+
             <div class="col-lg-6 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon"><i class="bi bi-card-checklist"></i></div>
                 <h4 class="title"><a href="">Heart rate</a></h4>
                 
-                <input id="slider" type="range" value="24" min="0" max="200" oninput="this.nextElementSibling.value = this.value">
-                <output id="salida">100</output>
+                <input id="slider" type="range" value="24" min="0" max="280" oninput="this.nextElementSibling.value = this.value">
+                <output id="salida">None</output>
 
             </div>
+
+
+
             <div class="col-lg-6 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon"><i class="bi bi-bar-chart"></i></div>
                 <h4 class="title"><a href="">P Waves</a></h4>
-                <select class="form-select" aria-label="Disabled select example">
+                <select class="form-select" aria-label="Disabled select example" id="P_wave">
                   <option selected>Select a value</option>
                   <option value="1">Positive</option>
-                  <option value="1">Normal</option>
-                  <option value="2">Irregular with normal QRS complex</option>
-                  <option value="3">P wave precedes QRS complex</option>
-                  <option value="3"> Absent </option>
-                  <option value="3">Not measurable</option>
-                  <option value="3">P waves are inverted</option>
-
+                  <option value="2">Normal</option>
+                  <option value="3">Absent</option>
+                  <option value="4">Not measurable</option>
+                  <option value="5">P wave precedes QRS complex</option>
                 </select>
             </div>
+
+
             <div class="col-lg-6 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon"><i class="bi bi-binoculars"></i></div>
                 <h4 class="title"><a href="">PR interval</a></h4>
-                <select class="form-select" aria-label="Disabled select example">
+                <select class="form-select" aria-label="Disabled select example" id="Pr_interval">
                   <option selected>Select a value</option>
-                  <option value="1">0.12 - 0.20</option>
+                  <option value="1">0.12 - 0.20 sec</option>
                   <option value="2">Irregular</option>
                   <option value="3">Constant</option>
-                  <option value="3">Not measurable</option>
-                  <option value="3">None</option>
-                  <option value="3">Prolonged</option>
-                  <option value="3">P waves occur before QRS complex</option>
-
+                  <option value="4">Not measurable</option>
+                  <option value="5">None</option>
                 </select>
             </div>
+
+
             <div class="col-lg-6 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon"><i class="bi bi-brightness-high"></i></div>
                 <h4 class="title"><a href="">QRS duration</a></h4>
-                <select class="form-select" aria-label="Disabled select example">
+                <select class="form-select" aria-label="Disabled select example" id="Qrs">
                   <option selected>Select a value</option>
-                  <option value="1">0.11</option>
-                  <option value="2">Less than 0.11</option>
-                  <option value="3">None</option>
+                  <option value="1">0.11 sec or less</option>
+                  <option value="2">None</option>
                   <option value="3"> Absent </option>
-                  <option value="3"> Narrow </option>
-
-
+                  <option value="4"> 0.12 sec or greater </option>
                 </select>
             </div>
+
 
           </div>
     
         </div>
     </section><!-- End Services Section -->
 
+
+    <header class="section-header wow fadeInUp">
+     
+      <p> <button id="botonPrediction" type="button" class="btn btn-primary">Heart Disease Prediction</button></p>
+      </header>
+ 
+
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>BizPage</h3>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-
-            <div class="social-links">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
-
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
-        </div>
-      </div>
+<footer id="footer">
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong>BizPage</strong>. All Rights Reserved
     </div>
-
-
-
-
-
-
-
-
-
-    
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>BizPage</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!--
-        All the links in the footer should remain intact.
-        You can delete the links only if you purchased the pro version.
-        Licensing information: https://bootstrapmade.com/license/
-        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
-      -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+    <div class="credits">
+      <!--
+      All the links in the footer should remain intact.
+      You can delete the links only if you purchased the pro version.
+      Licensing information: https://bootstrapmade.com/license/
+      Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
+    -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
-  </footer><!-- End Footer -->
+  </div>
+</footer><!-- End Footer -->
+
+
+<div class="popup">
+  <button id="close">&times;</button>
+  <h3>The prediction of the entered parameters results in: </h3>
+  <h2 id="ModificarPrediction">
+   
+  </h2>
+  <a  class="al"  href="prediction.html">Close</a>
+</div>
+
+
+
+
+
+
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <!-- Uncomment below i you want to use a preloader -->
@@ -275,6 +291,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/prediction.js"></script>
 
 
 </body>
