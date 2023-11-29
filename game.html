@@ -28,14 +28,138 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/gamestyle.css">
 
-  <!-- =======================================================
-  * Template Name: BizPage
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
+  <style>
+     #ventanaGame{
+      height: 500px;
+      width: 900px;
+      background-color: black;
+      border-radius: 10px;
+      margin-bottom: 100px;
+      position: relative;
+      padding-top: 80px;
+      padding-bottom: 430px;
+      
+  
+
+     }
+
+     #ventanaGameInside{
+      height: 420px;
+      border-radius: 5px;
+      width: 850px;
+      background-color: rgb(192, 227, 192);
+      position: relative;
+      
+      
+      
+     }
+
+     .info{
+      width: 120px;
+      height: 30px;
+      padding-left: 10px;
+      padding-top: 2px;
+      background-color: white;
+      position: relative;
+      float: left;
+      margin-top: -45px;
+      margin-left: 40px;
+      color: black;
+      font-weight: bold;
+      align-content: center;
+      
+
+     }
+     #video{
+
+      height: auto;
+      width: 630px;
+      margin-top: 30px;
+      margin-left: 90px;
+
+     }
+     .opciones{
+      
+      margin: 15px 60px;
+     }
+     
+
+     
+  .popup{
+    background-color: #ffffff;
+    border: #18D26E solid;
+    width: 450px;
+    padding:  0px 30px 10px 30px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none;
+    text-align: center;
+    color: black;
+    
+}
+.popup button{
+    display: block;
+    margin:  0 0 5px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+    color: black;
+}
+.al{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #0f72e5;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 0;
+}
+#ModificarPrediction{
+  font-weight: bolder;
+}
+#game-container{
+    
+    width: 450px;
+    
+}
+#question-container{
+    border: black solid;
+}
+.botonees{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    
+}
+
+
+
+  </style>
+
+
+
+
+
 </head>
 
 <body>
@@ -46,18 +170,18 @@
 
       <div class="row justify-content-center align-items-center">
         <div class="col-xl-11 d-flex align-items-center justify-content-between">
-          <h1 class="logo"><a href="index.html">ECG CARDIAC DISEASE PREDICTION</a></h1>
+          <h1 class="logo"><a href="index.html">ECG CARDIAC DISEASE GAME</a></h1>
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
           <nav id="navbar" class="navbar">
             <ul>
-              <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-              <li><a class="nav-link scrollto" href="#about">Menu</a></li>
+              <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+              <li><a class="nav-link scrollto" href="index.html#about">Menu</a></li>
               <li><a class="nav-link scrollto" href="learn.html">Learn</a></li>
               <li><a class="nav-link scrollto " href="prediction.html">Prediction</a></li>
-              <li><a class="nav-link scrollto" href="game.html">Game</a></li>
-              <li><a class="nav-link scrollto" href="#contact">About</a></li>
+              <li><a class="nav-link scrollto active" href="game.html">Game</a></li>
+              <li><a class="nav-link scrollto" href="index.html#team">About</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar -->
@@ -74,281 +198,103 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfolio Details</h2>
+          <h2></h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li>Portfolio Details</li>
+            <li><a href="game.html">Game</a></li>
+            <li>Game Now</li>
           </ol>
         </div>
 
       </div>
     </section><!-- Breadcrumbs Section -->
 
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-        <div class="container">
-  
-          <div class="row gy-4">
-  
-            <div class="col-lg-8">
-              <div class="portfolio-details-slider swiper">
-                <div class="swiper-wrapper align-items-center">
-  
-                  <div class="swiper-slide">
-                    <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
-                  </div>
-  
-                  <div class="swiper-slide">
-                    <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
-                  </div>
-  
-                  <div class="swiper-slide">
-                    <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
-                  </div>
-  
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-  
-            <div class="col-lg-4">
-              <div class="portfolio-info">
-                <h3>Project information</h3>
-                <ul>
-                  <li><strong>Category</strong>: Web design</li>
-                  <li><strong>Client</strong>: ASU Company</li>
-                  <li><strong>Project date</strong>: 01 March, 2020</li>
-                  <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-                </ul>
-              </div>
-              <div class="portfolio-description">
-                <h2>This is an example of portfolio detail</h2>
-                <p>
-                  Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-                </p>
-              </div>
-            </div>
-  
-          </div>
-  
-        </div>
-      </section><!-- End Portfolio Details Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services">
+    <section id="services" style="margin-bottom: -70px;">
         <div class="container" data-aos="fade-up">
     
             <header class="section-header wow fadeInUp">
-            <h3>Services</h3>
-            <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus, ad pro quaestio laboramus. Ei ubique vivendum pro. At ius nisl accusam lorenta zanos paradigno tridexa panatarel.</p>
+            <h3>GAME</h3>
+            <p>Play and learn about heart diseases by recognizing the ECG signals and the specific parameters of each of them.</p>
             </header>
     
-            <div class="row">
-    
-            <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="100">
-                <div class="icon"><i class="bi bi-briefcase"></i></div>
-                <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-            <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon"><i class="bi bi-card-checklist"></i></div>
-                <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-            </div>
-            <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon"><i class="bi bi-bar-chart"></i></div>
-                <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
-            <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon"><i class="bi bi-binoculars"></i></div>
-                <h4 class="title"><a href="">Magni Dolores</a></h4>
-                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-            <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon"><i class="bi bi-brightness-high"></i></div>
-                <h4 class="title"><a href="">Nemo Enim</a></h4>
-                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-            <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="400">
-                <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-                <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div>
-    
-            </div>
     
         </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Team Section ======= -->
-    <section id="team">
-        <div class="container" data-aos="fade-up">
-          <div class="section-header">
-            <h3>Team</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-          </div>
-  
-          <div class="row">
-  
-            <div class="col-lg-3 col-md-6">
-              <div class="member" data-aos="fade-up" data-aos-delay="100">
-                <img src="assets/img/team-1.jpg" class="img-fluid" alt="">
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>Walter White</h4>
-                    <span>Chief Executive Officer</span>
-                    <div class="social">
-                      <a href=""><i class="bi bi-twitter"></i></a>
-                      <a href=""><i class="bi bi-facebook"></i></a>
-                      <a href=""><i class="bi bi-instagram"></i></a>
-                      <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+ 
+    <div id="game-container" class="container">
+        <div id="question-container">
+            <video id="heart-video" controls autoplay loop></video>
+            <div id="options-container">
+                <button class="option botonees" onclick="checkAnswer(this)"></button>
+                <button class="option botonees" onclick="checkAnswer(this)"></button>
+                <button class="option botonees" onclick="checkAnswer(this)"></button>
             </div>
-  
-            <div class="col-lg-3 col-md-6">
-              <div class="member" data-aos="fade-up" data-aos-delay="200">
-                <img src="assets/img/team-2.jpg" class="img-fluid" alt="">
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>Sarah Jhonson</h4>
-                    <span>Product Manager</span>
-                    <div class="social">
-                      <a href=""><i class="bi bi-twitter"></i></a>
-                      <a href=""><i class="bi bi-facebook"></i></a>
-                      <a href=""><i class="bi bi-instagram"></i></a>
-                      <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-6">
-              <div class="member" data-aos="fade-up" data-aos-delay="300">
-                <img src="assets/img/team-3.jpg" class="img-fluid" alt="">
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>William Anderson</h4>
-                    <span>CTO</span>
-                    <div class="social">
-                      <a href=""><i class="bi bi-twitter"></i></a>
-                      <a href=""><i class="bi bi-facebook"></i></a>
-                      <a href=""><i class="bi bi-instagram"></i></a>
-                      <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-6">
-              <div class="member" data-aos="fade-up" data-aos-delay="400">
-                <img src="assets/img/team-4.jpg" class="img-fluid" alt="">
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>Amanda Jepson</h4>
-                    <span>Accountant</span>
-                    <div class="social">
-                      <a href=""><i class="bi bi-twitter"></i></a>
-                      <a href=""><i class="bi bi-facebook"></i></a>
-                      <a href=""><i class="bi bi-instagram"></i></a>
-                      <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-          </div>
-  
         </div>
-      </section><!-- End Team Section -->
-      
-     <!-- ======= Call To Action Section ======= -->
-      <section id="call-to-action">
-          <div class="container text-center" data-aos="zoom-in">
-            <h3>Call To Action</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <a class="cta-btn" href="#">Call To Action</a>
-          </div>
-      </section><!-- End Call To Action Section -->
+        <div id="score-container">
+            <p>Puntaje: <span id="score">0</span></p>
+        </div>
+    </div>
+    
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>BizPage</h3>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
-          </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
 
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
 
-            <div class="social-links">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
 
-          </div>
 
-          <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
 
-        </div>
-      </div>
+
+
+
+
+
+
+
+
+ <footer id="footer">
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong>Baque - Rosero - Carlosama</strong>. All Rights Reserved
     </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>BizPage</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!--
-        All the links in the footer should remain intact.
-        You can delete the links only if you purchased the pro version.
-        Licensing information: https://bootstrapmade.com/license/
-        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
-      -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+    <div class="credits">
+      <!--
+      All the links in the footer should remain intact.
+      You can delete the links only if you purchased the pro version.
+      Licensing information: https://bootstrapmade.com/license/
+      Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
+    -->
+      Designed by <a href="https://github.com/damina25">Dayanna Baque</a>
     </div>
-  </footer><!-- End Footer -->
+  </div>
+</footer><!-- End Footer -->
+
+
+
+<!--
+<div class="popup">
+  <button id="close">&times;</button>
+  <h3>The answer is: </h3>
+  <h2 id="ModificarPrediction">
+   
+  </h2>
+  <button type="button" class="btn btn-primary" id="eliminar" style="color: black;">Next</button>
+</div>
+-->
+
+
+
+
+
+
+
+
+
+
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <!-- Uncomment below i you want to use a preloader -->
@@ -366,6 +312,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/game.js"></script>
 
 </body>
 

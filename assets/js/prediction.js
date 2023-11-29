@@ -1,10 +1,5 @@
 
-
-
 var boton = document.getElementById("botonPrediction");
-
-
-
 
 
 //Variables de Ritmo cardiaco
@@ -239,7 +234,84 @@ function predecir(){
 
         }
     }else if(!rhythm_R.checked && rhythm_I.checked){
-        alert("Irregular")
+        //alert("Irregular")
+
+        if(heartRate.value < 60){
+            if(PWave.value == 1){
+                if(pr.value == 1){
+                    if(qrs.value == 1){
+
+                    }else{
+                        alert("Qrs not defined")
+                    }
+
+                }else{
+                    alert("Pr not defined")
+                }
+
+            }else{
+                alert("PWave not defined")
+            }
+
+        }else if(heartRate.value >59 && heartRate.value < 121){
+            if(PWave.value == 1){
+                if(pr.value == 1){
+                    if(qrs.value == 1){
+
+                        modificarTexto.innerHTML += `<h2>SINUS ARRYTHMIA<h2/>`;
+                        mostrarPop();
+
+                    }else{
+                        alert("Qrs not defined")
+                    }
+
+                }else{
+                    alert("Pr not defined")
+                }
+
+            }else{
+                alert("Pwave not defined")
+            }
+
+
+        }else{   //Mayor a 120
+           if(PWave.value == 2){
+
+                if(pr.value == 3){
+                    if(qrs.value == 4){
+                        modificarTexto.innerHTML += `<h2> 2° ATRIOVENTRICULAR BLOCK TYPE 2 <h2/>`;
+                        mostrarPop();
+
+                    }else{
+                        alert("Qrs not defined")
+                    }
+
+                }else{
+                    alert("Pr not defined")
+                }
+
+           }else if(PWave.value == 4 ){
+
+                if (pr.value == 4 ){
+                    if (qrs.value ==1){
+                        modificarTexto.innerHTML += `<h2>ATRIAL FIBRILLATION<h2/>`;
+                        mostrarPop();
+
+                    }else{
+                        alert("Qrs not defined")
+                    }
+
+
+                }else{
+                    alert("Pr not defined")
+                }
+
+           }else{
+            alert("Pwave not defined")
+           }
+
+        }
+
     }else{
         alert("Debes seleccionar una opción.")
     }
