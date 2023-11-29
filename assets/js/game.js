@@ -4,7 +4,7 @@ const allVideos = [
     'assets/video/atrilFibrillationn.mp4', 'assets/video/idioventricular.mp4', 'assets/video/junctionalRhythm.mp4',
     'assets/video/junctionalTachy.mp4', 'assets/video/NSRwithAVB.mp4', 'assets/video/pacedAtrial.mp4',
     'assets/video/pacedVentricular.mp4', 'assets/video/sinusArrythmia.mp4', 'assets/video/sinusBradi.mp4',
-    'assets/video/sinusTachy.mp4', 'assets/video/synus.mp4', 'assets/video/synusRythm.mp4',
+    'assets/video/sinusTachy.mp4', 'assets/video/synusRythm.mp4',
     'assets/video/Vfibrillation.mp4', 'assets/video/VTach.mp4', 'assets/video/wanderingPacemaker.mp4'
     // Agrega las demás rutas de videos aquí
 ];
